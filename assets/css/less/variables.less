@@ -1,0 +1,41 @@
+/******************************************************************************************/
+/* Variables & Mixins
+/******************************************************************************************/
+
+.clearfix() {
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+.inline-block() {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+}
+.size(@width, @height) {
+	width:@width;
+	height:@height;
+}
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.opacity(@opacity) {
+	opacity:@opacity / 100;
+	filter:~"alpha(opacity=@{opacity})";
+}

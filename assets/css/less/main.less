@@ -1,0 +1,121 @@
+/******************************************************************************************/
+/* General Styles
+/******************************************************************************************/
+
+body {
+	color:#333;
+	font-size:16px;
+	line-height:1.5em;
+	background:#f4f4f4;
+	font-family:'Lato', Arial, Helvetica, sans-serif;
+}
+a {
+	color:#cc0000;
+	text-decoration:none;
+}
+a:hover {
+	color:#ab2227;
+}
+ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+h2 {
+    color:#484f55;
+    margin:40px 0;
+    font-size:20px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+/******************************************************************************************/
+/* Structure
+/******************************************************************************************/
+
+.content {
+    position:relative;
+    margin:0 auto;
+    width:1080px;
+    .clearfix();
+}
+
+/******************************************************************************************/
+/* Filter
+/******************************************************************************************/
+
+.filter-box {
+    margin:0 0 50px;
+    text-align:center;
+}
+.filter-box ul {
+    margin:0 0 10px;
+    text-align:center;
+}
+.filter-box li {
+    margin:0 2px;
+    .inline-block();
+}
+
+/******************************************************************************************/
+/* Buttons
+/******************************************************************************************/
+
+.btn {
+	color:#fff;
+	padding:0 12px;
+	font-size:13px;
+	cursor:pointer;
+	.inline-block();
+    font-weight:900;
+	line-height:26px;
+	.border-radius(14px);
+    text-transform:uppercase;
+    .transition(all 0.3s ease);
+}
+.btn:hover {
+    color:#fff;
+}
+.red-btn {
+	background:#ed1b24;
+}
+.red-btn:hover {
+	background:#cc0000;
+}
+.grey-btn {
+	background:#cacbcd;
+}
+.grey-btn:hover {
+	background:#484f55;
+}
+
+/******************************************************************************************/
+/* Grid
+/******************************************************************************************/
+
+.course-grid {
+    .clearfix();
+    margin:0 0 60px;
+}
+.box {
+    position:relative;
+    float:left;
+    margin:15px;
+    width:200px;
+    font-size:14px;
+    background:#fff;
+    padding:24px 20px;
+    .transition(all 0.3s ease);
+}
+.box h3 {
+    color:#484f55;
+    font-size:18px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+.box p {
+    padding:10px 0;
+}
+.box ul {
+    margin:10px 0;
+}
