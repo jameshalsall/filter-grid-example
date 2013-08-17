@@ -7,17 +7,26 @@ $(function() {
         $clicked.addClass('active');
 
         var activeFilters = getActiveFilters();
-        var $grid = $('#grid');
-        var $courses = $grid.find('div.box');
-        $courses.hide();
+        applyFilters(activeFilters);
+    });
 
-        for (var filter in activeFilters) {
-            if (activeFilters.hasOwnProperty(filter) && activeFilters[filter] !== 'all') {
-                $courses = $courses.filter('div.box[data-' + filter + '="' + activeFilters[filter] + '"]');
+    /**
+     * Applies filters to the grid
+     *
+     * @param {object} filters The object containing active filter names and values
+     */
+    function applyFilters(filters) {
+        var $grid = $('#grid');
+        var $matched = $grid.find('div.box');
+        $matched.hide();
+
+        for (var f in filters) {
+            if (filters.hasOwnProperty(f) && filters[f] !== 'all') {
+                $matched = $matched.filter('div.box[data-' + f + '="' + filters[f] + '"]');
             }
         }
-        $courses.show();
-    });
+        $matched.show();
+    }
 
     /**
      * Gets an array of active filters from the selected items
