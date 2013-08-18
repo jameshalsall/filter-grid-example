@@ -99,12 +99,20 @@ h2 {
     float:left;
     margin:15px;
     width:200px;
+    display:block;
     font-size:14px;
     background:#fff;
     padding:24px 20px;
-    .transition(all 0.3s ease);
+    .transition(all .3s ease);
+}
+.hidden {
+    overflow:hidden;
+    .size(0px,0px);
+    margin:0;
+    padding:0;
 }
 .box h3 {
+    height:44px;
     color:#484f55;
     font-size:18px;
     font-weight:900;

@@ -18,14 +18,14 @@ $(function() {
     function applyFilters(filters) {
         var $grid = $('#grid');
         var $matched = $grid.find('div.box');
-        $matched.hide();
+        $matched.addClass('hidden');
 
         for (var f in filters) {
             if (filters.hasOwnProperty(f) && filters[f] !== 'all') {
                 $matched = $matched.filter('div.box[data-' + f + '="' + filters[f] + '"]');
             }
         }
-        $matched.show();
+        $matched.removeClass('hidden');
     }
 
     /**
