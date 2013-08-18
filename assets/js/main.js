@@ -55,12 +55,19 @@ $(function() {
      * @returns {object}
      */
     function getActiveFilters() {
+        // create an object to store filter names and their associated values
         var active = {};
+        // we use jQuery.each to iterate over the active filters in our "filter-box" <div> element
         $.each($('div.filter-box a.active'), function(i, e) {
+            // for each of the active filters, we get the filter name by looking at its <ul> container
+            // and using the .data() method to fetch the "data-filter-name" attribute value
             var filterName = $(e).closest('ul').data('filter-name');
+            // we store the value of the filter ("data-filter" attribute) against the filter name in
+            // the object that we created at the start of this function
             active[filterName] = $(e).data('filter');
         });
 
+        // we return our active filters
         return active;
     }
 });
